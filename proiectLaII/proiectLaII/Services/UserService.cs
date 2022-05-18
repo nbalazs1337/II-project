@@ -32,6 +32,39 @@ namespace proiectLaII.Services
         {
             return await _userRepository.GetUserByUserName(username);
         }
+        public async Task<IEnumerable<User>> GetAllUsers()
+        {
+            return await _userRepository.GetAllUsers();
+        }
+
+        public async Task AddNewUser(User user)
+        {
+            await _userRepository.AddNewUser(user);
+        }
+
+        public async Task UpdateUser(string whatToChange, User user)
+        {
+            await _userRepository.UpdateUser(whatToChange,user);
+        }
+
+        public string getPassword(string username)
+        {
+            return  _userRepository.getPassword(username);
+        }
+
+        public async Task DeleteUser(string username)
+        {
+            await _userRepository.DeleteUser(username);
+        }
+        public async Task UpdateUserAdress(string whatToChange, Address adress)
+        {
+            await _userRepository.UpdateUserAdress(whatToChange,adress);
+        }
+
+        public async Task UpdateBasket(string whatToChange, Basket basket)
+        {
+            await _userRepository.UpdateBasket(whatToChange,basket);
+        }
 
         public void Save()
         {

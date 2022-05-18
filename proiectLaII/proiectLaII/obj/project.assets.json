@@ -9852,11 +9852,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Eric\\OneDrive\\Desktop\\an3sem2\\II\\proiectLaII\\proiectLaII\\proiectLaII.csproj",
+      "projectUniqueName": "C:\\Users\\Eric\\OneDrive\\Desktop\\Industrial-Informatics-project\\proiectLaII\\proiectLaII\\proiectLaII.csproj",
       "projectName": "proiectLaII",
-      "projectPath": "C:\\Users\\Eric\\OneDrive\\Desktop\\an3sem2\\II\\proiectLaII\\proiectLaII\\proiectLaII.csproj",
+      "projectPath": "C:\\Users\\Eric\\OneDrive\\Desktop\\Industrial-Informatics-project\\proiectLaII\\proiectLaII\\proiectLaII.csproj",
       "packagesPath": "C:\\Users\\Eric\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Eric\\OneDrive\\Desktop\\an3sem2\\II\\proiectLaII\\proiectLaII\\obj\\",
+      "outputPath": "C:\\Users\\Eric\\OneDrive\\Desktop\\Industrial-Informatics-project\\proiectLaII\\proiectLaII\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

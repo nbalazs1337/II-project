@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "jIcrAfQ6go3/gyb2x7q0MLMfTt78ILJJsCNXVCAh7cn3hyWtCKirkiSgDq2Hq3iFv89kEav/HbZA6YuAYfsWqw==",
+  "dgSpecHash": "2kpE3S44ApiDcmEB7/wGt+fcvTvb7eaZjuTsQIsr/90M4uoiwlRB0DyZuVvIv2Hjl/3l44fjt1W2JT5KgFlH/Q==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Eric\\OneDrive\\Desktop\\an3sem2\\II\\proiectLaII\\proiectLaII\\proiectLaII.csproj",
+  "projectFilePath": "C:\\Users\\Eric\\OneDrive\\Desktop\\Industrial-Informatics-project\\proiectLaII\\proiectLaII\\proiectLaII.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Eric\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\Eric\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
