@@ -70,7 +70,7 @@ namespace proiectLaII.Repository
         public string getPassword(string userName)
         {
             var requestedUser = GetUserByUserName(userName);
-            return requestedUser.Result.Password;
+            return requestedUser.Result.Password.ToString();
         }
 
         public async Task DeleteUser(string userName)
