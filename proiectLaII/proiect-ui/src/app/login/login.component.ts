@@ -7,7 +7,7 @@ import { UserService } from '../services/user.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  pass?:string;
+  pass:string ='';
   constructor(private userservice :UserService) { }
 
   ngOnInit(): void {
@@ -15,6 +15,6 @@ export class LoginComponent implements OnInit {
   userName:string =''
   getPass(){
     this.userservice.getPasswordForUser(this.userName).subscribe(pass => this.pass = pass);
-   //console.log(this.pass);
+    console.log(this.pass);
   }
 }

@@ -10,6 +10,6 @@ export class UserService{
     constructor(private http: HttpClient){}
 
     public getPasswordForUser(username:string){
-        return this.http.get<any>(`${this.url}getPassword?username=${username}`)
+        return this.http.get<any>(`${this.url}getPassword?username=${username}`);
     }
 }
