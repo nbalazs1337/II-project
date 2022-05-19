@@ -36,17 +36,17 @@ export class LoginComponent implements OnInit {
     this.userservice.getPasswordForUser(this.userName).subscribe(user => this.user = user);
   }
 
-  
-  auxiliary(){
-    console.log(this.user?.password);
-  }
-
   check(){
-    if (this.passfromdb == this.user?.password){
-      console.log ("correct");
+    if (this.password == this.user?.password){
+      //to be implemented
+      console.log("correct");
     }
     else {
       console.log("wrong");
+      alert("Incorrect Username or Password");
     }
+
+    console.log(this.password);
+    console.log(this.user?.password);
   }
 }
