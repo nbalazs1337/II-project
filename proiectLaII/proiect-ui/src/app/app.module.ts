@@ -24,7 +24,7 @@ import { TopComponent } from './main-page/top/top.component';
     AboutComponent,
     ProductComponent,
     BrandsListComponent,
-    TopComponent
+    TopComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { User } from '../models/User';
-import { UserService } from '../services/user.service';
+import { UserService } from '../services/user.service'
 
 @Component({
   selector: 'app-register',
@@ -13,7 +13,7 @@ export class RegisterComponent implements OnInit {
   public myForm: FormGroup;
   constructor(private userservice :UserService, private formBuilder: FormBuilder) {
     this.myForm = formBuilder.group({
-      name: ['', Validators.required]
+      name: ['', [Validators.required, Validators.minLength(1)]]
     })
    }
 
@@ -76,21 +76,18 @@ export class RegisterComponent implements OnInit {
   }
 
   checkIfUsernameExists(username:string):boolean{
-    if (this.userToCheckPass != null) {
+    if (this.userToCheckPass?.userName == username) {
       console.log("exists");
       //alert("This username already exists. Try another one");
       return true;
     }
-    if (this.userToCheckPass == this.referenceUser){
-      alert("cannot leave empty fields");
-      return true;
-    }
-    else{
+    if(this.userToCheckPass?.userName != username){
       console.log("does not exists");
       console.log(username);
       console.log (this.userToCheckPass);
       return false;
     }
+    return true;
     
   }
 
@@ -124,8 +121,14 @@ export class RegisterComponent implements OnInit {
     }
   }
 
+
+  // de la validations care nu merg
   get m(){
     return this.myForm.controls;
+  }
+
+  onSubmit(){
+    console.log(this.myForm.value);
   }
 
  
