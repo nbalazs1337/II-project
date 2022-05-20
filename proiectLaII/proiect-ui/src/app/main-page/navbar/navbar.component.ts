@@ -19,7 +19,15 @@ export class NavbarComponent implements OnInit {
   }
 
   login(){
-    this.router.navigateByUrl('/login')
+    this.router.navigateByUrl('/login');
+  }
+
+  home(){
+    this.router.navigateByUrl('');
+  }
+
+  about(){
+    this.router.navigateByUrl('/about');
   }
 
 }

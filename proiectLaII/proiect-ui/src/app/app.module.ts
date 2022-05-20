@@ -9,6 +9,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RegisterComponent } from './register/register.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { NavbarComponent } from './main-page/navbar/navbar.component';
+import { AboutComponent } from './about/about.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { NavbarComponent } from './main-page/navbar/navbar.component';
     RegisterComponent,
     MainPageComponent,
     NavbarComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
