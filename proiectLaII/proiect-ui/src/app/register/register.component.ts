@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { User } from '../models/User';
 import { UserService } from '../services/user.service';
 
@@ -9,7 +10,13 @@ import { UserService } from '../services/user.service';
 })
 export class RegisterComponent implements OnInit {
 
-  constructor(private userservice :UserService) { }
+  public myForm: FormGroup;
+  constructor(private userservice :UserService, private formBuilder: FormBuilder) {
+    this.myForm = formBuilder.group({
+      name: ['', Validators.required]
+    })
+   }
+
 
   ngOnInit(): void {
   }
@@ -34,6 +41,59 @@ export class RegisterComponent implements OnInit {
     }
   };
 
+  userToCheckPass?:User = {
+    name: '',
+    userName:'',
+    email:'',
+    password:'',
+    address : {
+      city:'',
+      country:'',
+      street:'',
+      building:'',
+      postalcode:'',
+      id:0
+    }
+  };
+
+  referenceUser?:User = {
+    name: '',
+    userName:'',
+    email:'',
+    password:'',
+    address : {
+      city:'',
+      country:'',
+      street:'',
+      building:'',
+      postalcode:'',
+      id:0
+    }
+  };
+
+  getUserToCheckPass(username:string){
+    this.userservice.getPasswordForUser(username).subscribe(userToCheckPass => this.userToCheckPass = userToCheckPass);
+  }
+
+  checkIfUsernameExists(username:string):boolean{
+    if (this.userToCheckPass != null) {
+      console.log("exists");
+      //alert("This username already exists. Try another one");
+      return true;
+    }
+    if (this.userToCheckPass == this.referenceUser){
+      alert("cannot leave empty fields");
+      return true;
+    }
+    else{
+      console.log("does not exists");
+      console.log(username);
+      console.log (this.userToCheckPass);
+      return false;
+    }
+    
+  }
+
   addNewUser(user:User){
     this.user.userName = this.username;
     this.user.email = this.email;
@@ -54,4 +114,19 @@ export class RegisterComponent implements OnInit {
     console.log(this.password);
     console.log(this.confirmPassword);
   }
+
+  submit(user:User){
+    if (this.checkIfUsernameExists(this.username) == false){
+      this.addNewUser(user);
+    }
+    else{
+      alert("This username already exists. You should try another one.");
+    }
+  }
+
+  get m(){
+    return this.myForm.controls;
+  }
+
+ 
 }
