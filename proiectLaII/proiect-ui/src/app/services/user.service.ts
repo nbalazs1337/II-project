@@ -3,6 +3,8 @@ import { environment } from "src/environments/environment";
 import { HttpClient, HttpHeaders } from "@angular/common/http";
 import { User } from "../models/User";
 import { Observable } from "rxjs";
+import { Brand } from "../models/Brand";
+import { Product } from "../models/Product";
 @Injectable({
     providedIn: 'root'
 })
@@ -18,5 +20,17 @@ export class UserService{
 
     public register(user:User) :Observable<User> {
         return this.http.put<User>(`${this.url}addNewUser`,user,this.httpOptions);
+    }
+
+    public getAllBrands(){
+        return this.http.get<Brand[]>(`${this.url}getBrands`)
+    }
+
+    public filterProducts(criteria:number){
+        return this.http.get<Product[]>(`${this.url}getProducsAfterBrands?brand=${criteria}`)
+    }
+
+    public getAllProducts(){
+        return this.http.get<Product[]>(`${this.url}getProduct`)
     }
 }

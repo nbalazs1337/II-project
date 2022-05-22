@@ -1,0 +1,15 @@
+.column{
+border-radius: 16px;
+height: 48px;
+min-width: 200px;
+width: 49%;
+margin-top: 12px;
+}
+
+.selectors{
+    border-radius: 16px;
+    height: 48px;
+    min-width: 200px;
+    width: 49%;
+    margin-top: 12px;
+}

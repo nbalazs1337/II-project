@@ -13,6 +13,7 @@ import { AboutComponent } from './about/about.component';
 import { ProductComponent } from './main-page/product/product.component';
 import { BrandsListComponent } from './main-page/brands-list/brands-list.component';
 import { TopComponent } from './main-page/top/top.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,8 @@ import { TopComponent } from './main-page/top/top.component';
     AppRoutingModule,
     HttpClientModule,
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

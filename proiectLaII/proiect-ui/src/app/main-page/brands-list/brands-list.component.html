@@ -1,1 +1,13 @@
-<p>brands-list works!</p>
+<br>
+
+<div class="column small-12 large-2">
+    <label>Filter</label>
+    <select class = "column" id = "selector">
+    <option *ngFor = "let b of brandsList" 
+    [value]="b" placeholder = "select one item" 
+    class = "selectors" 
+    (selectionChange) = "update(1)">
+        {{b.name}}
+    </option>
+</select>
+</div>
