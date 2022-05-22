@@ -1,5 +1,6 @@
 import { CurrencyPipe } from '@angular/common';
 import { Component, Injectable, OnInit, ViewChild } from '@angular/core';
+import { Router } from '@angular/router';
 import { LoginComponent } from '../login/login.component';
 import { Brand } from '../models/Brand';
 import { Product } from '../models/Product';
@@ -14,7 +15,7 @@ import { UserService } from '../services/user.service';
 
 export class MainPageComponent implements OnInit {
 
-  constructor(private userService:UserService) { }
+  constructor(private userService:UserService, private router:Router) { }
   productsList:Product[] = [];
   curentUser?:User;
   ngOnInit(): void {
@@ -28,5 +29,9 @@ export class MainPageComponent implements OnInit {
 
   display(){
     console.log(this.productsList);
+  }
+
+  home(){
+    this.router.navigateByUrl('');
   }
 }

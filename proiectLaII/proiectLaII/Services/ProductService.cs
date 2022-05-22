@@ -23,5 +23,10 @@ namespace proiectLaII.Services
         {
             return await _productRepository.GetProductsOfBrands(brand);
         }
+
+        public async Task<IEnumerable<Basket>> GetBasketItem()
+        {
+            return await _productRepository.GetBasketItem();
+        }
     }
 }

@@ -35,5 +35,11 @@ namespace proiectLaII.Controllers
             return await _service.GetProductsOfBrands(brand);
         }
 
+        [HttpGet("/getBasket")]
+        public async Task<IEnumerable<Basket>> GetBasket()
+        {
+            return await _service.GetBasketItem();
+        }
+
     }
 }

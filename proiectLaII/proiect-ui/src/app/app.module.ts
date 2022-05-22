@@ -14,6 +14,7 @@ import { ProductComponent } from './main-page/product/product.component';
 import { BrandsListComponent } from './main-page/brands-list/brands-list.component';
 import { TopComponent } from './main-page/top/top.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CheckoutComponent } from './checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ProductComponent,
     BrandsListComponent,
     TopComponent,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,

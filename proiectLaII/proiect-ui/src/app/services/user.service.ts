@@ -5,6 +5,7 @@ import { User } from "../models/User";
 import { Observable } from "rxjs";
 import { Brand } from "../models/Brand";
 import { Product } from "../models/Product";
+import { Basket } from "../models/Basket";
 @Injectable({
     providedIn: 'root'
 })
@@ -31,6 +32,10 @@ export class UserService{
     }
 
     public getAllProducts(){
-        return this.http.get<Product[]>(`${this.url}getProduct`)
+        return this.http.get<Product[]>(`${this.url}getProduct`);
+    }
+
+    public getBasket(){
+        return this.http.get<Basket[]>(`${this.url}getBasket`);
     }
 }

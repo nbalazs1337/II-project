@@ -7,5 +7,6 @@ namespace proiectLaII.Repository
         Task<IEnumerable<Products>> GetAllProducts();
         Task<IEnumerable<Brand>> GetAllBrands();
         Task<IEnumerable<Products>> GetProductsOfBrands(int brand);
+        Task<IEnumerable<Basket>> GetBasketItem();
     }
 }

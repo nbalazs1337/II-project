@@ -104,7 +104,7 @@ img {
 .brands-div{
     float:right;
     margin-right: 15%;
-    margin-bottom: 20px;
+    margin-bottom: 40px;
 }
 .card__title {
   color: #696969;
@@ -119,3 +119,18 @@ img {
   line-height: 1.5;
   margin-bottom: 1.25rem;
 }
+
+
+.checkout{
+    margin-left:20%;
+    margin-right: 20%;
+}
+
+
+
+
+
+
+
+
+

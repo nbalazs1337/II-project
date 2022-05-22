@@ -15,6 +15,11 @@ namespace proiectLaII.Repository
             return await _context.Products.Include(x => x.Brand).ToListAsync();
         }
 
+        public async Task<IEnumerable<Basket>> GetBasketItem()
+        {
+            return await _context.Baskets.Include(x => x.Products).ToListAsync();
+        }
+
         public async Task<IEnumerable<Brand>> GetAllBrands()
         {
             return await _context.Brands.ToListAsync();
@@ -24,7 +29,6 @@ namespace proiectLaII.Repository
         {
             return await _context.Products.Where(b => b.Brand.id == brand).ToListAsync();
         }
-
 
     }
 }
