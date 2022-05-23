@@ -64,7 +64,7 @@ export class CheckoutComponent implements OnInit {
       id:1
     }
   }
-  
+  newuser?:User;
   changeAddress(){
     if (this.user.userName == ''){
       alert("You are not logged in. Please log in first");
@@ -77,11 +77,13 @@ export class CheckoutComponent implements OnInit {
       street:this.street,
       building:this.building,
       postalcode:this.postalcode,
-      id:1
+      id:11
     }
     this.userservice.updateAddress(this.userservice.user.userName, this.address)
     console.log(this.address)
     console.log(this.user.userName);
+    console.log(this.userservice.getPasswordForUser(this.user.userName).subscribe(n =>this.newuser = n));
+    console.log(this.newuser)
     }
     
   }

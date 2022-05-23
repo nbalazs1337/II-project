@@ -33,8 +33,6 @@ export class BrandsListComponent implements OnInit {
     console.log(x);
   }
 
- 
-
   update(criteria:any){
     this.userService.filterProducts(criteria).subscribe(l => this.products = l);
     console.log(criteria);

@@ -17,7 +17,7 @@ namespace proiectLaII.Repository
         {
             if (!string.IsNullOrEmpty(userName))
             {
-                var user = _context.Users.FirstOrDefaultAsync(x => x.UserName == userName);
+                var user = _context.Users.Include(x => x.Adress).FirstOrDefaultAsync(x => x.UserName == userName);
                 return user;
             }
             else throw new Exception("Name not found");
@@ -52,7 +52,7 @@ namespace proiectLaII.Repository
             var requestedUser = GetUserByUserName(whatToChange);
             if (requestedUser.Result != null)
             {
-                requestedUser.Result.Adress=adress;
+                requestedUser.Result.Adress = adress;
                 await _context.SaveChangesAsync();
             }
         }

@@ -15,7 +15,13 @@ export class TopComponent implements OnInit {
   ngOnInit(): void {
   }
   checkout(){
-    this.router.navigateByUrl('/checkout');
+    if (this.userService.user.userName == ''){
+      alert("You cannot change address because you are not logged in");
+    }
+    else{
+      this.router.navigateByUrl('/checkout');
+    }
+    
   }
   tempuser:User = {
     name : '',
@@ -29,6 +35,21 @@ export class TopComponent implements OnInit {
       building: '',
       postalcode: '',
       id: 0 
+    }
+  }
+
+  chart(){
+    this.router.navigateByUrl('/chart');
+  }
+
+  status?:string;
+  delete(){
+    if (this.userService.user.userName == ''){
+      alert("We don't know who you are. Please login first to be able to delete your account");
+    }
+    else if (confirm("You really sure you want to delete your account?")){
+      this.userService.deleteUser(this.userService.user.userName).subscribe(x => this.status="succesfull deleted user");
+      alert(this.status);
     }
   }
   logOut(){

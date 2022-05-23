@@ -42,7 +42,11 @@ export class UserService{
     }
 
     public updateAddress(username:string, address:Address){
-        return this.http.post<Address>(`${this.url}/changeUserAdress?whatToChange=${username}`,address,this.httpOptions);
+        return this.http.post<Address>(`${this.url}changeUserAdress?whatToChange=${username}`,address,this.httpOptions);
+    }
+
+    public deleteUser(username:string){
+        return this.http.delete<User>(`${this.url}deleteUser?username=${username}`);
     }
 
     public user:User = {
