@@ -76,6 +76,10 @@ img {
   flex-direction: column;
   padding: 1rem;
 }
+.imgpic {
+  max-width: 100%;
+  display: inline-block!important;
+}
 .card__image {
   background-position: center center;
   background-repeat: no-repeat;

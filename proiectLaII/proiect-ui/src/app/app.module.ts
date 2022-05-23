@@ -15,6 +15,7 @@ import { BrandsListComponent } from './main-page/brands-list/brands-list.compone
 import { TopComponent } from './main-page/top/top.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CheckoutComponent } from './checkout/checkout.component';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [

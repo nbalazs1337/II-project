@@ -1,5 +1,6 @@
 import { Component, Injectable, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { CheckoutComponent } from '../checkout/checkout.component';
 import { MainPageComponent } from '../main-page/main-page.component';
 import { User } from '../models/User';
 import { UserService } from '../services/user.service';
@@ -28,7 +29,20 @@ export class LoginComponent implements OnInit {
     }
   };
 
-  @Input() user?:User;
+  @Input() user:User = {
+    name : '',
+    userName : '',
+    password : '',
+    email : '',
+    address : {
+      city: '',
+      country: '',
+      street: '',
+      building: '',
+      postalcode: '',
+      id: 0 
+    }
+  };
   constructor(private userservice :UserService, private router:Router) { }
 
   ngOnInit(): void {
@@ -42,8 +56,13 @@ export class LoginComponent implements OnInit {
   }
 
   check(){
-    if (this.password == this.user?.password){
+    if (this.userservice.user.userName!=''){
+      alert("You are already logged in");
+    }
+    else 
+      if (this.password == this.user?.password){
       console.log("correct");
+      this.sendUser();
       this.router.navigateByUrl('');
     }
     else {
@@ -52,10 +71,14 @@ export class LoginComponent implements OnInit {
     }
     
     console.log(this.password);
-    console.log(this.user?.password);
+    console.log(this.user);
   }
 
   home(){
     this.router.navigateByUrl('/register');
+  }
+
+  sendUser(){
+    this.userservice.user = this.user;
   }
 }

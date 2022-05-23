@@ -6,6 +6,8 @@ import { Observable } from "rxjs";
 import { Brand } from "../models/Brand";
 import { Product } from "../models/Product";
 import { Basket } from "../models/Basket";
+import { Address } from "../models/Address";
+
 @Injectable({
     providedIn: 'root'
 })
@@ -14,7 +16,7 @@ export class UserService{
     private url = `${environment.apiUrl}`;
     private httpOptions = { headers: new HttpHeaders({ 'Content-Type': 'application/json' }) };
     constructor(private http: HttpClient){}
-
+    
     public getPasswordForUser(username:string){
         return this.http.get<User>(`${this.url}getUserByUsername?username=${username}`);
     }
@@ -38,4 +40,24 @@ export class UserService{
     public getBasket(){
         return this.http.get<Basket[]>(`${this.url}getBasket`);
     }
+
+    public updateAddress(username:string, address:Address){
+        return this.http.post<Address>(`${this.url}/changeUserAdress?whatToChange=${username}`,address,this.httpOptions);
+    }
+
+    public user:User = {
+        name : '',
+        userName : '',
+        password : '',
+        email : '',
+        address : {
+          city: '',
+          country: '',
+          street: '',
+          building: '',
+          postalcode: '',
+          id: 0 
+        }
+      };
+
 }
