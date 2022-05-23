@@ -54,4 +54,8 @@ export class LoginComponent implements OnInit {
     console.log(this.password);
     console.log(this.user?.password);
   }
+
+  home(){
+    this.router.navigateByUrl('/register');
+  }
 }

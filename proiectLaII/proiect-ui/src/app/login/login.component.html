@@ -13,7 +13,7 @@
                 </span>
 
                 <div class="wrap-input100 validate-input" data-validate = "Valid email is required: ex@abc.xyz">
-                    <input class="input100" type="text" name="email" placeholder="Email" [(ngModel)]="userName">
+                    <input class="input100" type="text" name="email" placeholder="Email" [(ngModel)]="userName" (keydown.tab) = getPass()>
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
                         <i class="fa fa-envelope" aria-hidden="true"></i>
@@ -21,7 +21,7 @@
                 </div>
 
                 <div class="wrap-input100 validate-input" data-validate = "Password is required">
-                    <input class="input100" type="password" name="pass" placeholder="Password" [(ngModel)]="password" (click) = getPass()>
+                    <input class="input100" type="password" name="pass" placeholder="Password" [(ngModel)]="password"  (click) = getPass() >
                     <span class="focus-input100"></span>
                     <span class="symbol-input100">
                         <i class="fa fa-lock" aria-hidden="true"></i>
@@ -34,17 +34,8 @@
                     </button>
                 </div>
 
-                <div class="text-center p-t-12">
-                    <span class="txt1">
-                        Forgot
-                    </span>
-                    <a class="txt2" href="#">
-                        Username / Password?
-                    </a>
-                </div>
-
                 <div class="text-center p-t-136">
-                    <a class="txt2" href="#">
+                    <a class="txt2" (click)="home()">
                         Create your Account
                         <i class="fa fa-long-arrow-right m-l-5" aria-hidden="true"></i>
                     </a>
