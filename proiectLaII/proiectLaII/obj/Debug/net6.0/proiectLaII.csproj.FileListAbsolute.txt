@@ -540,3 +540,6 @@ C:\Users\Eric\OneDrive\Desktop\Industrial-Informatics-project\proiectLaII\proiec
 C:\Users\Eric\OneDrive\Desktop\Industrial-Informatics-project\proiectLaII\proiectLaII\obj\Debug\net6.0\proiectLaII.pdb
 C:\Users\Eric\OneDrive\Desktop\Industrial-Informatics-project\proiectLaII\proiectLaII\obj\Debug\net6.0\proiectLaII.genruntimeconfig.cache
 C:\Users\Eric\OneDrive\Desktop\Industrial-Informatics-project\proiectLaII\proiectLaII\obj\Debug\net6.0\ref\proiectLaII.dll
+C:\Users\Eric\OneDrive\Desktop\Industrial-Informatics-project\proiectLaII\proiectLaII\bin\Debug\net6.0\Castle.Core.dll
+C:\Users\Eric\OneDrive\Desktop\Industrial-Informatics-project\proiectLaII\proiectLaII\bin\Debug\net6.0\Moq.dll
+C:\Users\Eric\OneDrive\Desktop\Industrial-Informatics-project\proiectLaII\proiectLaII\bin\Debug\net6.0\nunit.framework.dll

@@ -1,13 +1,13 @@
 <br>
-
+<!-- 
 <div class="column small-12 large-2">
     <label>Filter</label>
-    <select class = "column" id = "selector">
-    <option *ngFor = "let b of brandsList" 
-    [value]="b" placeholder = "select one item" 
-    class = "selectors" 
-    (selectionChange) = "update(1)">
-        {{b.name}}
-    </option>
-</select>
-</div>
+    <select class = "column" id = "selector" [ngModel]="selectedValue" (ngModelChange)="onChange($event)">
+        <option *ngFor = "let b of brandsList" 
+        [value]="b" placeholder = "select one item" 
+        class = "selectors" 
+        [ngValue]="b.id">
+            {{b.name}}
+        </option>
+    </select>
+</div> -->

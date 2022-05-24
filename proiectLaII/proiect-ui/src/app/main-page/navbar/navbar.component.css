@@ -139,6 +139,13 @@ a {
     margin-top: 1rem;
   }
 }
+
+.imag{
+  width:100px;
+  height: 65px;
+  margin-top:10px;
+  margin-right: 10px;
+}
 .navbar .navbar-menu .navbar-nav > li > a {
   color: #3c4250;
   text-decoration: none;
