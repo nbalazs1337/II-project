@@ -1,0 +1,178 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  background-color: #f0f0f0;
+}
+body {
+  color: #999999;
+  font-family: 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0;
+  padding: 1rem;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+img {
+  height: auto;
+  max-width: 100%;
+  vertical-align: middle;
+}
+.btn {
+  background-color: white;
+  border: 1px solid #cccccc;
+  color: #696969;
+  padding: 0.5rem;
+  text-transform: lowercase;
+}
+.btn--block {
+  display: block;
+  width: 100%;
+}
+
+.checkoutbtn{
+    float:right;
+    margin-top :50px;
+    margin-right: 200px;
+    border-radius: 5px;
+
+    font-family: Montserrat-Bold;
+    font-size: 15px;
+    line-height: 1.5;
+    color: #fff;
+    text-transform: uppercase;
+
+    border-radius: 25px;
+    background: #57b846;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 25px;
+
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+.top{
+    position: absolute;
+    font-weight: 500;
+    font-size:x-large;
+    margin-left: 200px;
+    margin-top: 50px;
+    
+}
+.btn--block:hover{
+    background-color: rgb(71, 165, 197);
+    border: 1px solid #cccccc;
+    color: #ffffff;
+    padding: 0.5rem;
+    text-transform: lowercase;
+}
+
+.cards_div{
+    float:right;
+}
+
+.cards{
+    margin-left:10%;
+    display:flex;
+    flex-wrap: wrap;
+    flex: 1 0 50%;
+    flex-basis: 25%;
+    align-self: center;
+}
+
+.cards__item {
+  display: flex;
+  flex-wrap: wrap;
+  flex-basis: 28%;
+  margin: 10px;
+}
+
+.card {
+  background-color: white;
+  border-radius: 0.25rem;
+  box-shadow: 0 20px 40px -14px rgba(0, 0, 0, 0.25);
+}
+
+.card:hover .card__image {
+  filter: contrast(100%);
+}
+.card__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
+  padding: 1rem;
+}
+.imgpic {
+  max-width: 100%;
+  display: inline-block!important;
+}
+.card__image {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+  background-color: #ffffff;
+  filter: contrast(70%);
+  overflow: hidden;
+  position: relative;
+  transition: filter 0.5s cubic-bezier(0.43, 0.41, 0.22, 0.91);
+}
+.card__image::before {
+  content: "";
+  display: block;
+  padding-top: 56.25%;
+}
+@media (min-width: 40rem) {
+  .card__image::before {
+    padding-top: 66.6%;
+  }
+}
+
+.card__image--fence {
+  background-image: url("/assets/coming_soon.png");
+}
+.brands-div{
+    float:right;
+    margin-right: 15%;
+    margin-bottom: 40px;
+}
+.card__title {
+  color: #696969;
+  font-size: 1.25rem;
+  font-weight: 300;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+.card__text {
+  flex: 1 1 ;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  margin-bottom: 1.25rem;
+}
+
+
+.checkout{
+    margin-left:20%;
+    margin-right: 20%;
+}
+
+
+
+
+
+
+
+
+

@@ -80,6 +80,7 @@ export class CheckoutComponent implements OnInit {
       id:11
     }
     this.userservice.updateAddress(this.userservice.user.userName, this.address)
+    this.userservice.prods = [];
     console.log(this.address)
     console.log(this.user.userName);
     console.log(this.userservice.getPasswordForUser(this.user.userName).subscribe(n =>this.newuser = n));

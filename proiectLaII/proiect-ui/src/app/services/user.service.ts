@@ -46,6 +46,7 @@ export class UserService{
     }
 
     public deleteUser(username:string){
+        
         return this.http.delete<User>(`${this.url}deleteUser?username=${username}`);
     }
 
@@ -63,5 +64,6 @@ export class UserService{
           id: 0 
         }
       };
-
+      prods:Product[] = []
+      
 }

@@ -27,8 +27,16 @@ export class MainPageComponent implements OnInit {
   }
   
 
-  display(){
-    console.log(this.productsList);
+  addProduct(prod:Product){
+    console.log(this.userService.user.userName)
+    if (this.userService.user.userName == ''){
+      alert("You are not logged in. You cannot add items to the chart")
+    }
+    else{
+      this.userService.prods.push(prod);
+      console.log(this.userService.prods);
+    }
+    
   }
 
   home(){

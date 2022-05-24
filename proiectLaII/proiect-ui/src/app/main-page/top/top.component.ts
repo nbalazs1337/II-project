@@ -39,7 +39,13 @@ export class TopComponent implements OnInit {
   }
 
   chart(){
-    this.router.navigateByUrl('/chart');
+    if (this.userService.user.userName == ''){
+      alert("You are not loggend in. YOu have no items in the chart")
+    }
+    else{
+      this.router.navigateByUrl('/chart');
+    }
+    
   }
 
   status?:string;

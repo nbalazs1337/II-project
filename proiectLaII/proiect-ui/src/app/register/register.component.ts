@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router } from '@angular/router';
 import { User } from '../models/User';
 import { UserService } from '../services/user.service'
 
@@ -11,7 +12,7 @@ import { UserService } from '../services/user.service'
 export class RegisterComponent implements OnInit {
 
   public myForm: FormGroup;
-  constructor(private userservice :UserService, private formBuilder: FormBuilder) {
+  constructor(private userservice :UserService, private formBuilder: FormBuilder, private router:Router) {
     this.myForm = formBuilder.group({
       name: ['', [Validators.required, Validators.minLength(1)]]
     })
@@ -115,6 +116,8 @@ export class RegisterComponent implements OnInit {
   submit(user:User){
     if (this.checkIfUsernameExists(this.username) == false){
       this.addNewUser(user);
+      alert("Successfully added new username");
+      this.router.navigateByUrl('');
     }
     else{
       alert("This username already exists. You should try another one.");
