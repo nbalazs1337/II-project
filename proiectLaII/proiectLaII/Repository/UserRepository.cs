@@ -47,6 +47,16 @@ namespace proiectLaII.Repository
             }
         }
 
+        public async Task ChangePassword(string username, string newPassword)
+        {
+            var requestedUser = GetUserByUserName(username);
+            if (requestedUser.Result != null)
+            {
+                requestedUser.Result.Password = newPassword;
+                await _context.SaveChangesAsync();
+            }
+        }
+
         public async Task UpdateUserAdress(string whatToChange, Address adress)
         {
             var requestedUser = GetUserByUserName(whatToChange);

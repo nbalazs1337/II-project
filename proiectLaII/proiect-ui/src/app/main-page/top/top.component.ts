@@ -13,13 +13,14 @@ export class TopComponent implements OnInit {
   constructor(private router:Router,private userService:UserService) { }
 
   ngOnInit(): void {
+
   }
-  checkout(){
+  changePass(){
     if (this.userService.user.userName == ''){
-      alert("You cannot change address because you are not logged in");
+      alert("You cannot change password because you are not logged in");
     }
     else{
-      this.router.navigateByUrl('/checkout');
+      this.router.navigateByUrl('/changepass');
     }
     
   }
@@ -49,15 +50,18 @@ export class TopComponent implements OnInit {
   }
 
   status?:string;
+
   delete(){
     if (this.userService.user.userName == ''){
       alert("We don't know who you are. Please login first to be able to delete your account");
     }
     else if (confirm("You really sure you want to delete your account?")){
-      this.userService.deleteUser(this.userService.user.userName).subscribe(x => this.status="succesfull deleted user");
+      this.userService.deleteUser(this.userService.user.userName).subscribe(x => this.status="Succesfully deleted user");
       alert(this.status);
+      window.location.reload();
     }
   }
+
   logOut(){
     console.log(this.userService.user.userName);
     if (this.userService.user.userName == ''){

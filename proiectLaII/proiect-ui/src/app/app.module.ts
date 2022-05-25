@@ -17,6 +17,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { environment } from 'src/environments/environment';
 import { ChartComponent } from './chart/chart.component';
+import { ChangePasswordComponent } from './change-password/change-password.component';
 
 @NgModule({
   declarations: [
@@ -31,6 +32,7 @@ import { ChartComponent } from './chart/chart.component';
     TopComponent,
     CheckoutComponent,
     ChartComponent,
+    ChangePasswordComponent,
   ],
   imports: [
     BrowserModule,

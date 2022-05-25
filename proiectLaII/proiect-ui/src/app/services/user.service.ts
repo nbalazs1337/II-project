@@ -50,6 +50,10 @@ export class UserService{
         return this.http.delete<User>(`${this.url}deleteUser?username=${username}`);
     }
 
+    public changePassword(username?:string, newPassword?:string){
+        return this.http.post<User>(`${this.url}changePassword?username=${username}&newPassword=${newPassword}`,this.httpOptions);
+    }
+
     public user:User = {
         name : '',
         userName : '',

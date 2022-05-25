@@ -61,6 +61,11 @@ namespace proiectLaII.Services
             await _userRepository.UpdateUserAdress(whatToChange,adress);
         }
 
+        public async Task ChangePassword(string username, string newPassword)
+        {
+            await _userRepository.ChangePassword(username, newPassword);
+        }
+
         public async Task UpdateBasket(string whatToChange, Basket basket)
         {
             await _userRepository.UpdateBasket(whatToChange,basket);

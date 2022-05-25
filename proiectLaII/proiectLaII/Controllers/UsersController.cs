@@ -62,6 +62,19 @@ namespace proiectLaII.Controllers
             }
         }
 
+        [HttpPost("/changePassword")]
+        public async Task ChangePassword(string username, string newPassword)
+        {
+            try
+            {
+                await _service.ChangePassword(username, newPassword);
+            }
+            catch (Exception ex)
+            {
+                NotFound("user not found");
+            }
+        }
+
         [HttpGet("/getPassword")]
         public string getPassword(string username)
         {
