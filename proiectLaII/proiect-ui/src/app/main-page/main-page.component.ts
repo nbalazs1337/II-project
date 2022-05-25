@@ -27,6 +27,7 @@ export class MainPageComponent implements OnInit {
   }
   
 
+
   addProduct(prod:Product){
     console.log(this.userService.user.userName)
     if (this.userService.user.userName == ''){

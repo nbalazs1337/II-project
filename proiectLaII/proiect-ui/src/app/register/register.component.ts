@@ -79,6 +79,11 @@ export class RegisterComponent implements OnInit {
   checkIfUsernameExists(username:string):boolean{
     if (this.userToCheckPass?.userName == username) {
       console.log("exists");
+      this.username ='';
+      this.password = '';
+      this.confirmPassword  ='';
+      this.email  = '';
+      this.name ='';
       //alert("This username already exists. Try another one");
       return true;
     }
@@ -98,6 +103,11 @@ export class RegisterComponent implements OnInit {
     this.user.name = this.name;
     if (this.password != this.confirmPassword){
       alert("Passwords does not match");
+      this.username ='';
+      this.password = '';
+      this.confirmPassword  ='';
+      this.email  = '';
+      this.name ='';
     }
     else{
       this.user.password = this.confirmPassword;

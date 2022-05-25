@@ -45,14 +45,7 @@ export class CheckoutComponent implements OnInit {
   getProducts(){
     this.userservice.getBasket().subscribe(p => this.productsList = p);
   }
-  address:Address = {
-    city : this.city,
-    country:this.country,
-    street:this.street,
-    building:this.building,
-    postalcode:this.postalcode,
-    id:1
-  };
+  address?:Address; 
   
   setAddress(address:Address){
     address = {
@@ -79,12 +72,15 @@ export class CheckoutComponent implements OnInit {
       postalcode:this.postalcode,
       id:11
     }
-    this.userservice.updateAddress(this.userservice.user.userName, this.address)
+    
+    console.log(this.user);
     this.userservice.prods = [];
-    console.log(this.address)
+    console.log("user");
     console.log(this.user.userName);
-    console.log(this.userservice.getPasswordForUser(this.user.userName).subscribe(n =>this.newuser = n));
-    console.log(this.newuser)
+    console.log(this.address)
+    this.userservice.updateAddress(this.user.userName, this.address)
+    //console.log(this.userservice.getPasswordForUser(this.user.userName).subscribe(n =>this.newuser = n));
+    
     }
     
   }
